@@ -1,162 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jean's Resume</title>
-    </head>
-
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jean Irakiza | Cybersecurity Analyst</title>
+    <meta name="description" content="Resume of Jean Irakiza, Cybersecurity Analyst in Louisville, KY. Threat intelligence, system hardening, network security monitoring, and IT support." />
+    <meta name="author" content="Jean Irakiza" />
+    <meta name="theme-color" content="#0f2744" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jean Irakiza",
+        "jobTitle": "Cybersecurity Analyst",
+        "email": "irakiza04jean@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Louisville",
+            "addressRegion": "KY"
+        },
+        "url": "https://jeanij.github.io/",
+        "sameAs": ["https://github.com/JeanIJ"]
+    }
+    </script>
     <style>
+        :root {
+            --ink: #1c2430;
+            --muted: #526072;
+            --navy: #0f2744;
+            --accent: #1a4f73;
+            --line: #d9e0ea;
+            --paper: #ffffff;
+            --bg: #e7edf3;
+            --chip: #f4f7fb;
+        }
+
+        * { box-sizing: border-box; }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            line-height: 1.55;
+            color: var(--ink);
+            background: var(--bg);
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.15em;
+            overflow-wrap: anywhere;
         }
-        h1,
-        h2 {
-            color: #007bff;
+
+        a:hover { color: var(--navy); }
+
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
         }
-        .header {
-            text-align: center;
+
+        .page {
+            max-width: 840px;
+            margin: 1.5rem auto;
+            background: var(--paper);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(15, 39, 68, 0.08);
+            overflow: hidden;
         }
-        .header h1 {
-            margin: 10px 0;
+
+        header {
+            padding: 2.25rem 2.25rem 1.6rem;
+            background: var(--navy);
+            color: #f4f7fb;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(1.7rem, 4vw, 2.15rem);
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .title {
+            margin: 0.4rem 0 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #c5d7ea;
+        }
+
         .contact {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-        .contact a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .section {
-            margin: 20px 0;
-        }
-        .section h2 {
-            margin-bottom: 10px;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-        }
-        .item {
-            margin-bottom: 15px;
-        }
-        .item h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #555;
-        }
-        .item p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        .skills ul {
-            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem 1.15rem;
+            margin: 1rem 0 0;
             padding: 0;
+            list-style: none;
+            font-size: 0.95rem;
         }
-        .skills ul li {
-            display: inline-block;
-            background: #007bff;
-            color: #fff;
-            padding: 5px 10px;
-            margin: 5px 5px 5px 0;
-            border-radius: 4px;
+
+        .contact a { color: #ffffff; }
+
+        .contact a:hover { color: #d6e6f5; }
+
+        main { padding: 0.4rem 2.25rem 2.25rem; }
+
+        section { margin-top: 1.6rem; }
+
+        h2 {
+            margin: 0 0 0.85rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 2px solid var(--navy);
+            color: var(--navy);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .summary { margin: 0; }
+
+        .skills { margin: 0; }
+
+        .skills div {
+            display: grid;
+            grid-template-columns: 11.25rem 1fr;
+            gap: 0.2rem 1rem;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .skills dt {
+            margin: 0;
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 0.92rem;
+        }
+
+        .skills dd {
+            margin: 0;
+        }
+
+        .company {
+            margin: 1.15rem 0 0.35rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .company:first-of-type { margin-top: 0; }
+
+        .where {
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        article { margin-top: 0.95rem; }
+
+        .entry-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.4rem 1.25rem;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .org {
+            margin: 0.15rem 0 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .dates {
+            margin: 0;
+            flex: 0 0 auto;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        ul.bullets {
+            margin: 0.4rem 0 0;
+            padding-left: 1.15rem;
+        }
+
+        ul.bullets li { margin: 0.28rem 0; }
+
+        ul.bullets li::marker { color: var(--accent); }
+
+        @media (max-width: 680px) {
+            .page {
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            header,
+            main { padding-left: 1.15rem; padding-right: 1.15rem; }
+
+            header { padding-top: 1.6rem; }
+
+            .skills div,
+            .entry-head {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dates {
+                text-align: left;
+                white-space: normal;
+            }
+        }
+
+        @media print {
+            body { background: #fff; }
+
+            .page {
+                margin: 0;
+                max-width: none;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            a { color: var(--ink); text-decoration: none; }
         }
     </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Jean Irakiza</h1>
+            <p class="title">Cybersecurity Analyst</p>
+            <ul class="contact">
+                <li>Louisville, KY</li>
+                <li><a href="mailto:irakiza04jean@gmail.com">irakiza04jean@gmail.com</a></li>
+                <li><a href="https://github.com/JeanIJ">github.com/JeanIJ</a></li>
+            </ul>
+        </header>
 
-    <body>
-        <main class="container">
-            <section class="header">
-                <h1>Jean Irakiza</h1>
-                <p class="contact">
-                    Email: <a href="mailto:jean.irakiza@gmail.com">jean.irakiza@gmail.com</a>
+        <main>
+            <section aria-labelledby="summary-heading">
+                <h2 id="summary-heading">Summary</h2>
+                <p class="summary">
+                    Transitioning IT professional specializing in threat intelligence, system hardening, and network security monitoring.
+                    Experienced in troubleshooting systems, managing hardware deployments, and executing precise technical installations in fast paced environments.
+                    Building on a strong foundation in IT support and independent field troubleshooting to secure critical infrastructure and mitigate operational risks.
                 </p>
             </section>
-            
-            <section class="section">
-                <h2>Summary</h2>
-                <p>
-                   Hardworking Professional with experience in resident care, and logistics operations. 
-                   Reliable team player focused on safety and following procedures. 
-                   Intrested in technology and pursuing entry into IT field.
-                </p>
+
+            <section aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Technical Skills</h2>
+                <dl class="skills">
+                    <div>
+                        <dt>Security &amp; Analysis</dt>
+                        <dd>Threat Intelligence, MITRE ATT&amp;CK, OSINT, Malware Analysis, Phishing Triage, Linux System Hardening, Privilege Management, Network Security Monitoring, Cloudflare Web Application Firewall (WAF), Content Security Policies (CSP), HTTP Strict Transport Security (HSTS).</dd>
+                    </div>
+                    <div>
+                        <dt>Tools &amp; Technologies</dt>
+                        <dd>Kali Linux, VirtualBox, tcpdump, tshark, Wireshark, Snort IDS, YARA, auditd, iptables, Bash, Git, Python, Next.js App Router, React, Supabase, Vercel, Claude Code CLI, Gemini.</dd>
+                    </div>
+                    <div>
+                        <dt>IT &amp; Systems</dt>
+                        <dd>Windows/macOS diagnostics, TCP/IP networking, router/WiFi configuration, hardware component replacement, POS terminal setup.</dd>
+                    </div>
+                    <div>
+                        <dt>Transferable Skills</dt>
+                        <dd>Technical Documentation, Problem Solving, Active Listening, Workflow Coordination, Customer Service Excellence.</dd>
+                    </div>
+                    <div>
+                        <dt>Spoken Languages</dt>
+                        <dd>Fluent in Swahili, Kinyarwanda, Kirundi, Kinyabwishya, Runyakole, and Luganda.</dd>
+                    </div>
+                </dl>
             </section>
 
-            <section class="section">
-                <h2>Work Experience</h2>
-                <div class="item">
-                    <h3>Special Education Technician</h3>
-                    <p>2023 - Present</p>
-                    <p>
-                        Lead protection and inclusion initiatives for diverse resident groups. Manage multidisciplinary teams 
-                        to optimize facility resources and ensure dignified care standards are met daily.
-                    </p>
-                </div>
-                <div class="item">
-                    <h3>Forklift Operator</h3>
-                    <p>Previous Experience</p>
-                    <p>
-                        Operated heavy machinery to move and organize materials safely and efficiently. 
-                        Maintained accurate inventory records and adhered to strict safety protocols in a fast-paced warehouse environment.
-                    </p>
-                </div>
-            </section>
+            <section aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects &amp; Technical Experience</h2>
 
-            <div class="section">
-                <h2>Education</h2>
-                <div class="item">
-                    <h3>Computer Operations and Technical Foundations</h3>
-                    <p>2025 - Present</p>
-                    <p>Training in essential IT operations including software deployment, environment configuration and system maintenance.</p>
-                </div>
-            </div>
-
-            <section class="section">
-                <h2>Skills</h2>About-Me-HTML/  Helloworld/  JeanIJ.github.io/  correct-the-html/
-                <div class="skills">
-                    <ul>
-                        <li>HTML5 & Semantic Structure</li>
-                        <li>CSS3 & Box Model</li>
-                        <li>Git & GitHub Flow</li>
-                        <li>Safety & Compliance</li>
-                        <li>Team Leadership</li>
-                        <li>Problem Solving</li>
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Lead Full Stack Developer &amp; Security Architect</h3>
+                            <p class="org">International Good Samaritan · <a href="https://internationalgoodsamaritan.org">internationalgoodsamaritan.org</a></p>
+                        </div>
+                        <p class="dates">Nov 2025 to Present</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Led the end to end development of a modern, scalable web platform for an international non profit organization.</li>
+                        <li>Architected the platform from the ground up using the Next.js App Router and React, integrating a secure Supabase backend for real time data management.</li>
+                        <li>Managed the complete project lifecycle from initial UI/UX design to production deployment via a Vercel CI/CD pipeline, accelerating development cycles using AI assisted workflows with Claude Code CLI and Gemini.</li>
+                        <li>Conducted a comprehensive security overhaul post build, hardening the infrastructure with a Cloudflare Web Application Firewall (WAF), strict Content Security Policies (CSP), HTTP Strict Transport Security (HSTS), and encrypted environment variable management.</li>
                     </ul>
-                </div>
+                </article>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Security Operations Assessment: Intelligence, Analysis, Hardening &amp; Monitoring</h3>
+                            <p class="org">SOC Analyst (Simulated Lab Environment) · <a href="https://github.com/JeanIJ/Threat-Defense-Framework">github.com/JeanIJ/Threat-Defense-Framework</a></p>
+                        </div>
+                    </div>
+                    <ul class="bullets">
+                        <li>Executed an end to end SOC analyst assessment simulating security operations across the NIST Cybersecurity Framework: Identify, Protect, Detect, and Respond in a controlled Kali Linux and VirtualBox lab.</li>
+                        <li>Profiled a synthetic APT adversary and mapped multiple TTPs to MITRE ATT&amp;CK, extracting IOCs into machine readable CSV feeds for SIEM ingestion.</li>
+                        <li>Ran live theHarvester reconnaissance, surfacing over 569 subdomains, mail servers, and cloud endpoints, and risk rated exposed developer portals and VPN gateways.</li>
+                        <li>Reverse engineered a synthetic phishing kill chain from delivery to C2 exfiltration, identified header anomalies, and authored a custom YARA signature.</li>
+                        <li>Audited a live Kali VM and reduced user privilege sprawl from 16 groups to 2, remediated SSH misconfigurations, deployed iptables firewall rules, enabled auditd logging, and automated hardening via Bash script.</li>
+                        <li>Captured and analyzed a live PCAP using tcpdump, tshark, and Wireshark, engineering 4 production ready Snort IDS rules for C2 beaconing, port scanning, LSASS dumping, and ICMP tunneling.</li>
+                    </ul>
+                </article>
             </section>
 
-            <section class="section">
-                <h2>Projects</h2>
-                <div class="item">
-                    <h3>About-Me-HTML (Assignment)</h3>
-                    <p>
-                        For this project, the goal was to build a basic webpage from scratch to practice fundamentals of HTML document.
-                    </p>
-                </div>
-                <div class="item">
-                    <h3>Hello World Git Flow (Assignment)</h3>
-                    <p>
-                       Git Flow and Version control: This Project was actually focused on the process of software development.
-                    </p>
-                </div>
-                <div class="item">
-                    <h3>Correct-the-HTML (Assignment)</h3>
-                    <p>
-                        This project involved taking existing written codebase and "refactoring" it (cleaning it up without changinng how it looks).
-                    </p>
-                </div>
+            <section aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Professional Experience</h2>
+
+                <p class="company">GE Appliances, a Haier Company <span class="where">· Louisville, KY</span></p>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Supply Chain Bilingual HR Ambassador</h3>
+                        </div>
+                        <p class="dates">2025 to Present</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Interview Manufacturing Operator candidates and represent GE Appliances at hiring events, setting clear and honest expectations about production work.</li>
+                        <li>Onboard new hires with plant tours and team introductions, answering questions new employees are often hesitant to ask.</li>
+                        <li>Interpret for employees in Swahili and Kinyarwanda during safety briefings and one on one conversations, ensuring mutual understanding of job duties, rights, and resources.</li>
+                        <li>Support employee integration into workplace norms and culture, and coach employees on HR systems such as Workday, Kronos, and Okta, escalating technical issues to IT when needed.</li>
+                        <li>Act as a familiar point of contact on the production floor, connecting employees to the right resource or department and routing concerns about attendance, accommodations, and policies to the appropriate HR partner.</li>
+                        <li>Promote employee engagement through company updates, programs, and recognition events in line with the GE Appliances Zero Distance philosophy.</li>
+                        <li>Identify and document early signs of employee dissatisfaction and escalate them to leadership for resolution, supporting retention.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Replacement Operator / Controlman</h3>
+                        </div>
+                        <p class="dates">June 2023 to April 2026</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Operated independently on a fast paced production floor, managing workflow and keeping operations running across multiple technical stations.</li>
+                        <li>Utilized technical tracking systems like My Connect and Okta to keep production moving accurately.</li>
+                        <li>Trained new operators and covered shift absences, demonstrating adaptability, leadership, and the ability to quickly master new technical procedures under pressure.</li>
+                    </ul>
+                </article>
+
+                <p class="company">Ceva Logistics <span class="where">· Louisville, KY</span></p>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Production Line Team Lead</h3>
+                        </div>
+                        <p class="dates">September 2022 to June 2023</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Promoted from warehouse associate to team lead on a high velocity electronics production line, overseeing scanning, packing, and quality verification of electronic components.</li>
+                        <li>Managed inventory workflow using handheld scanner systems and followed strict packing protocols to ensure accurate loading and delivery.</li>
+                        <li>Coordinated with logistics and dispatch teams to meet tight deadlines, developing strong organizational habits and independent decision making.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section aria-labelledby="education-heading">
+                <h2 id="education-heading">Education &amp; Certifications</h2>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Certificate of Completion, Cybersecurity Pathway</h3>
+                            <p class="org">Code:You · Louisville, KY</p>
+                        </div>
+                        <p class="dates">January 2026</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Completed Code:You&rsquo;s Cybersecurity pathway in 2026 with a two part capstone.</li>
+                        <li>Capstone part one: Built a Python tool that analyzes authentication logs, detecting brute force attacks, credential stuffing, privilege escalation, and off hour activity, with rules mapped to MITRE ATT&amp;CK and results ranked by severity.</li>
+                        <li>Capstone part two: Authored a SOC report dissecting a phishing attack chain from malicious email to hidden PowerShell and data theft over DNS, with three detection rules verified via Talos, URLScan, and CyberChef.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Cybersecurity Analyst Certificate</h3>
+                            <p class="org">Coursera / Edureka</p>
+                        </div>
+                    </div>
+                    <ul class="bullets">
+                        <li>Analyzed cyber threats, adversary behaviors, and structured attack lifecycles using intelligence frameworks like MITRE ATT&amp;CK.</li>
+                        <li>Conducted ethical hacking, reconnaissance, and vulnerability assessments using industry standard tools.</li>
+                        <li>Detected, investigated, and responded to incidents utilizing SIEM, EDR, and network monitoring techniques.</li>
+                        <li>Applied AI and LLM technologies securely within SOC workflows while enforcing governance controls.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Google IT Support Professional Certificate</h3>
+                            <p class="org">Google</p>
+                        </div>
+                    </div>
+                    <ul class="bullets">
+                        <li>Comprehensive training in Windows/macOS troubleshooting, networking fundamentals, router configuration, system administration, and hardware diagnostics.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Coursework toward Associate Degree in Computer Science</h3>
+                            <p class="org">Jefferson Community and Technical College · Louisville, KY</p>
+                        </div>
+                    </div>
+                    <ul class="bullets">
+                        <li>Mastered foundational IT concepts including operating system administration (Windows/Linux), TCP/IP network infrastructure, and physical hardware architecture.</li>
+                        <li>Applied systematic technical support methodologies to diagnose, troubleshoot, and resolve complex hardware and software conflicts.</li>
+                        <li>Built a strong baseline in logic, systems thinking, and data management, laying the technical groundwork for advanced cybersecurity assessments and full stack development.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <div class="entry-head">
+                        <div>
+                            <h3>Certified Medical Assistant (CMA) &amp; Certified Phlebotomist</h3>
+                            <p class="org">Health Careers Training Institute</p>
+                        </div>
+                        <p class="dates">2024</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Managed and protected sensitive Patient Health Information (PHI), ensuring strict adherence to HIPAA regulations, access controls, and data privacy standards.</li>
+                        <li>Maintained precise electronic health records (EHR) and clinical documentation, demonstrating the meticulous attention to detail required for security logging and incident reporting.</li>
+                        <li>Explained complex clinical procedures to patients in clear terms, building communication skills directly applicable to IT helpdesk support and team collaboration.</li>
+                    </ul>
+                </article>
             </section>
         </main>
-    </body>
+    </div>
+</body>
 </html>
