@@ -3,159 +3,151 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jean's Resume</title>
+        <title>Jean Irakiza</title>
+        <style>
+            :root {
+                color-scheme: light;
+                --text: #1c2430;
+                --muted: #4d5968;
+                --link: #0b4f8a;
+                --line: #d7dee6;
+                --bg: #f4f6f8;
+                --card: #ffffff;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+                line-height: 1.5;
+                color: var(--text);
+                background: var(--bg);
+            }
+
+            main {
+                max-width: 40rem;
+                margin: 0 auto;
+                padding: 2.5rem 1.25rem 3rem;
+            }
+
+            header {
+                margin-bottom: 2rem;
+            }
+
+            h1 {
+                margin: 0 0 0.5rem;
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 650;
+            }
+
+            h2 {
+                margin: 0 0 1rem;
+                font-size: 1.125rem;
+                font-weight: 650;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .intro {
+                color: var(--muted);
+                max-width: 36rem;
+            }
+
+            .github {
+                margin-top: 1rem;
+            }
+
+            a {
+                color: var(--link);
+                overflow-wrap: anywhere;
+            }
+
+            a:hover {
+                text-decoration-thickness: 2px;
+            }
+
+            a:focus-visible {
+                outline: 2px solid var(--link);
+                outline-offset: 3px;
+            }
+
+            .projects {
+                display: grid;
+                gap: 0.75rem;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .projects li {
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: 8px;
+                padding: 1rem 1.1rem;
+            }
+
+            .projects h3 {
+                margin: 0 0 0.35rem;
+                font-size: 1rem;
+                font-weight: 650;
+            }
+
+            .projects p {
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 480px) {
+                main {
+                    padding: 1.75rem 1rem 2.5rem;
+                }
+
+                h1 {
+                    font-size: 1.75rem;
+                }
+            }
+        </style>
     </head>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h1,
-        h2 {
-            color: #007bff;
-        }
-        .header {
-            text-align: center;
-        }
-        .header h1 {
-            margin: 10px 0;
-        }
-        .contact {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-        .contact a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .section {
-            margin: 20px 0;
-        }
-        .section h2 {
-            margin-bottom: 10px;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-        }
-        .item {
-            margin-bottom: 15px;
-        }
-        .item h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #555;
-        }
-        .item p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        .skills ul {
-            list-style: none;
-            padding: 0;
-        }
-        .skills ul li {
-            display: inline-block;
-            background: #007bff;
-            color: #fff;
-            padding: 5px 10px;
-            margin: 5px 5px 5px 0;
-            border-radius: 4px;
-        }
-    </style>
-
     <body>
-        <main class="container">
-            <section class="header">
+        <main>
+            <header>
                 <h1>Jean Irakiza</h1>
-                <p class="contact">
-                    Email: <a href="mailto:jean.irakiza@gmail.com">jean.irakiza@gmail.com</a>
+                <p class="intro">
+                    Cybersecurity projects and hands-on labs. Code and notes live on GitHub.
                 </p>
-            </section>
-            
-            <section class="section">
-                <h2>Summary</h2>
-                <p>
-                   Hardworking Professional with experience in resident care, and logistics operations. 
-                   Reliable team player focused on safety and following procedures. 
-                   Intrested in technology and pursuing entry into IT field.
+                <p class="github">
+                    <a href="https://github.com/JeanIJ">github.com/JeanIJ</a>
                 </p>
-            </section>
+            </header>
 
-            <section class="section">
-                <h2>Work Experience</h2>
-                <div class="item">
-                    <h3>Special Education Technician</h3>
-                    <p>2023 - Present</p>
-                    <p>
-                        Lead protection and inclusion initiatives for diverse resident groups. Manage multidisciplinary teams 
-                        to optimize facility resources and ensure dignified care standards are met daily.
-                    </p>
-                </div>
-                <div class="item">
-                    <h3>Forklift Operator</h3>
-                    <p>Previous Experience</p>
-                    <p>
-                        Operated heavy machinery to move and organize materials safely and efficiently. 
-                        Maintained accurate inventory records and adhered to strict safety protocols in a fast-paced warehouse environment.
-                    </p>
-                </div>
-            </section>
-
-            <div class="section">
-                <h2>Education</h2>
-                <div class="item">
-                    <h3>Computer Operations and Technical Foundations</h3>
-                    <p>2025 - Present</p>
-                    <p>Training in essential IT operations including software deployment, environment configuration and system maintenance.</p>
-                </div>
-            </div>
-
-            <section class="section">
-                <h2>Skills</h2>About-Me-HTML/  Helloworld/  JeanIJ.github.io/  correct-the-html/
-                <div class="skills">
-                    <ul>
-                        <li>HTML5 & Semantic Structure</li>
-                        <li>CSS3 & Box Model</li>
-                        <li>Git & GitHub Flow</li>
-                        <li>Safety & Compliance</li>
-                        <li>Team Leadership</li>
-                        <li>Problem Solving</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Projects</h2>
-                <div class="item">
-                    <h3>About-Me-HTML (Assignment)</h3>
-                    <p>
-                        For this project, the goal was to build a basic webpage from scratch to practice fundamentals of HTML document.
-                    </p>
-                </div>
-                <div class="item">
-                    <h3>Hello World Git Flow (Assignment)</h3>
-                    <p>
-                       Git Flow and Version control: This Project was actually focused on the process of software development.
-                    </p>
-                </div>
-                <div class="item">
-                    <h3>Correct-the-HTML (Assignment)</h3>
-                    <p>
-                        This project involved taking existing written codebase and "refactoring" it (cleaning it up without changinng how it looks).
-                    </p>
-                </div>
+            <section aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects</h2>
+                <ul class="projects">
+                    <li>
+                        <h3>
+                            <a href="https://github.com/JeanIJ/Threat-Defense-Framework">Threat-Defense-Framework</a>
+                        </h3>
+                        <p>Threat defense labs: intel, malware analysis, hardening, and network monitoring.</p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a href="https://github.com/JeanIJ/capstone-log-analyzer">capstone-log-analyzer</a>
+                        </h3>
+                        <p>Python log analyzer from a cybersecurity capstone.</p>
+                    </li>
+                    <li>
+                        <h3>
+                            <a href="https://github.com/JeanIJ/ironclad-unified-inventory-cli">ironclad-unified-inventory-cli</a>
+                        </h3>
+                        <p>Asset inventory CLI across NetBox, Qualys, and CrowdStrike.</p>
+                    </li>
+                </ul>
             </section>
         </main>
     </body>

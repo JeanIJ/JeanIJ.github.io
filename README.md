@@ -1,15 +1,15 @@
 # JeanIJ.github.io
 
-Personal GitHub Pages resume site.
+Personal GitHub Pages site for Jean Irakiza.
 
 ## Description
-Single-page HTML/CSS resume for Jean Irakiza, published via GitHub Pages.
+
+A short landing page with links to GitHub and a few public cybersecurity projects.
 
 ## Technologies
+
 - HTML, CSS, GitHub Pages
 
 ## Usage
-Open https://jeanij.github.io/ or open `index.html` locally.
 
-## Status
-Early portfolio page; content may be refreshed separately.
+Open https://jeanij.github.io/ or open `index.html` in a browser.
